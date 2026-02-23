@@ -304,6 +304,13 @@ mod tests {
         add("€", T![unknown]);
         add("trans", T!["trans"]);
         add("endtrans", T!["endtrans"]);
+        add("sw_embed", T!["sw_embed"]);
+        add("sw_end_embed", T!["sw_end_embed"]);
+        add("sw_use", T!["sw_use"]);
+        add("sw_import", T!["sw_import"]);
+        add("sw_from", T!["sw_from"]);
+        add("sw_block", T!["sw_block"]);
+        add("sw_source", T!["sw_source"]);
 
         // lex and compare
         let results = lex(&source);
@@ -1082,5 +1089,40 @@ mod tests {
     #[test]
     fn lex_ludtwig_ignore() {
         check_token("ludtwig-ignore", T!["ludtwig-ignore"]);
+    }
+
+    #[test]
+    fn lex_sw_embed() {
+        check_token("sw_embed", T!["sw_embed"]);
+    }
+
+    #[test]
+    fn lex_sw_end_embed() {
+        check_token("sw_end_embed", T!["sw_end_embed"]);
+    }
+
+    #[test]
+    fn lex_sw_use() {
+        check_token("sw_use", T!["sw_use"]);
+    }
+
+    #[test]
+    fn lex_sw_import() {
+        check_token("sw_import", T!["sw_import"]);
+    }
+
+    #[test]
+    fn lex_sw_from() {
+        check_token("sw_from", T!["sw_from"]);
+    }
+
+    #[test]
+    fn lex_sw_block() {
+        check_token("sw_block", T!["sw_block"]);
+    }
+
+    #[test]
+    fn lex_sw_source() {
+        check_token("sw_source", T!["sw_source"]);
     }
 }
